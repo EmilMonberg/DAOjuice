@@ -1,0 +1,470 @@
+/* reset alt */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container_desktop {
+    display: none;
+}
+
+.footer_desktop {
+    display: none;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'Skinny';
+    src: url('../Fonts/theskinny-bold-webfont.woff') format('woff'),
+        url('../Fonts/theskinny-bold-webfont.woff2') format('woff2');
+}
+
+.container {
+    background-color: #fff5e1;
+}
+
+/* grid layout */
+.container {
+    display: grid;
+    grid-template-rows: auto 25vw auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "banner"
+        "salg"
+        "emner"
+        "footer"
+}
+
+.header {
+    grid-area: nav;
+}
+
+.banner {
+    position: relative;
+    grid-area: banner;
+}
+
+.salgs_tekst {
+    grid-area: salg;
+}
+
+.emner {
+    grid-area: emner;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* grid layout slut */
+
+/* links */
+
+
+.link:hover {
+    color: rgb(122, 169, 117);
+}
+
+.link {
+    color: #fff5e1;
+    text-decoration: none;
+}
+
+.emne_overskrift {
+    color: #3a3c33;
+    text-decoration: none;
+}
+
+/* links slut */
+
+
+/* header */
+.logo {
+    text-decoration: none;
+    width: 25%;
+    position: absolute;
+    z-index: 1;
+    border-radius: 80px;
+    box-shadow: 0px 0px 20px #fff;
+}
+
+.nav_liste {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: right;
+}
+
+.header {
+    background-color: #3a3c33;
+}
+
+
+.nav_element {
+    list-style: none;
+    font-size: 1.5em;
+    font-family: Skinny;
+    float: right;
+    padding: 5px;
+}
+
+/* header slut */
+
+
+/* banner */
+.banner {
+    background: url('../Images/banner1.jpg') no-repeat center;
+    background-size: 100%;
+
+}
+/* banner slut */
+
+
+/* salgs tekst */
+.salgs_tekst_overskrift {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: Skinny;
+    font-size: 1.9em;
+}
+
+.salgs_tekst_tekst {
+    padding: 7px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-family: sans-serif;
+    letter-spacing: 0.3px;
+    font-family: baskerville;
+}
+
+
+/* salgs tekst slut */
+
+
+/* drop down menuer */
+.collapsible {
+    background-color: #ab9a51;
+    color: #3a3c33;
+    padding: 0px;
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-family: Skinny;
+    text-align: center;
+
+
+}
+
+.dropdown_margin {
+    padding: 15px;
+}
+
+.collapsible:active {
+    background-color: #3a3c33;
+}
+
+/*
+.collapsible:after {
+    content: '\002B';
+    float: left;
+}
+
+
+.active:after {
+    content: "\2212";
+    float: left;
+}
+*/
+
+.indhold {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    overflow-y: scroll;
+    max-height: 350px;
+    background-color: #fff5e1;
+
+}
+
+
+.udvalg_billede {
+    width: 100%;
+}
+
+.udvalg_ul {
+    list-style: none;
+}
+
+.udvalg_li {
+    padding-top: 8px;
+    border-bottom: 1px solid grey;
+    font-weight: 700;
+}
+
+.udvalg_pris {
+    float: right;
+}
+
+.ing {
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.galleri_banner {
+    max-width: 100%;
+}
+
+.galleri {
+    max-width: 49%;
+}
+
+.findos {
+    background-color: #3a3c33;
+    overflow-y: scroll;
+    max-height: 350px;
+    padding: 0 18px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: baskerville;
+    color: #7aa975;
+    font-size: 18px;
+    border-bottom: 1px solid #ab9a51;
+
+
+
+
+}
+
+.findos_overskrift {
+    padding-top: 10px;
+
+}
+
+.logo_findos {
+    width: 20%;
+    padding-bottom: 10px;
+}
+
+/* drop down menuer slut */
+
+
+/* footer */
+.footer {
+    background-color: #3a3c33;
+    padding: 10px;
+}
+
+.footer_tekst {
+    text-align: center;
+    color: #fff5e1;
+    font-size: 12px;
+}
+
+/* footer slut */
+
+
+/* Media Quaries */
+@media only screen and (min-width: 720px) {
+
+
+    .container {
+        display: none;
+    }
+
+    .container_desktop {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nav nav"
+/*            "banner banner"*/
+            "underside underside"
+            "footer footer"
+    }
+
+    .container_desktop {
+        background-color: #fff5e1;
+    }
+
+    .header {
+        grid-area: nav;
+    }
+
+/*
+    .banner {
+        grid-area: banner;
+    }
+*/
+
+    .underside {
+        grid-area: underside;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .logo {
+        text-decoration: none;
+        width: 6%;
+        left: 47.5%;
+        z-index: 1;
+        box-shadow: 0px 0px 40px #fff;
+    }
+
+
+    .nav_liste_desktop {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        background-color: #3a3c33;
+        color: #ab9a51;
+        font-family: Skinny;
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    .links {
+        text-decoration: none;
+        color: #ab9a51;
+    }
+    
+     a:hover {
+        color: #7aa975;
+    }
+
+    .banner {
+        margin-top: 20px;
+        background: url('../Images/OmDaoBanner.jpg') no-repeat center;
+        margin-top: 20px;
+        background-size: 80%;
+    }
+
+
+    .salgs_tekst_overskrift {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-right: 10%;
+        margin-left: 10%;
+        font-family: Skinny;
+        font-size: 2vw;
+        text-align: left;
+        color: #616544;
+    }
+
+    .salgs_tekst_tekst {
+        background-color: white;
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 40px;
+        font-size: 1.5em;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+	
+	.udvalg_overskrift {
+		margin-top: 25px;
+        margin-bottom: 25px;
+        margin-right: 10%;
+        margin-left: 10%;
+        font-family: Skinny;
+        font-size: 2vw;
+        text-align: left;
+        color: #616544;
+	}
+	
+	.udvalg_kaffe {
+		background-color: white;
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 40px;
+        font-size: 1.5em;
+        padding-top: 10px;
+        padding-bottom: 20px;
+	}
+    
+	.udvalg_ul_underside {
+		margin-right: 10%;
+        margin-left: 10%;
+        font-size: 1.5vw;
+        padding-top: 80px;
+        padding-bottom: 20px;
+        font-family: baskerville;
+        list-style-type: none;
+		
+	}
+	
+	.udvalg_billede_underside {
+		width: 100%;
+	
+	}
+
+
+
+    .footer_grid {
+        font-size: 1.3vw;
+        color: #ab9a51;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "kontakt aabning some";
+
+    }
+
+    .kontakt_grid {
+        grid-area: kontakt;
+        text-align: center;
+
+    }
+    
+    .aabningstider_grid {
+        grid-area: aabning;
+        text-align: center;
+    }
+    
+    .some_grid {
+        grid-area: some;
+        text-align: center;
+    }
+    
+    .footer_grid {
+        background-color: #3a3c33;
+    }
+    
+    .kontakt_footer {
+        text-align: center;
+        list-style: none;
+    }
+    
+    .footer_dage {
+        display: inline-block;
+        list-style: none;
+        text-align: left;
+    }
+    .footer_tider {
+        display: inline-block;
+        list-style: none;
+        text-align: right;
+    }
+    .footer_some {
+        list-style: none;
+        text-align: center;
+    }
+    
+    .footer_overskrift {
+        padding: 10px;
+        font-family: Skinny;
+        
+    }
+    
+    .footer_font {
+        font-family: baskerville;
+    }
